@@ -1,4 +1,3 @@
-# angular-demos
 <b>This is a angular-demos, It can show my progress of study.</b>
 ## 02directive——Angularjs的创建指令方法
 ### restrict 值分类:
@@ -42,6 +41,42 @@
             restrict : 'AECM',
             template : $templateCache.get('cache.html'),
             replace : true
+        }
+    })
+```
+### transclude属性的使用(让创建的标签里面的内容不被替换)
+下面代码让html页面中的`<no-Replace>希望我不被替换掉</no-Replace>`里面的内容不会被替换
+```
+    myApp.directive("noReplace",function(){
+        return {
+            restrict : 'AECM',
+            template : "<div>Hello everyone,I am noReplace!</div><div ng-transclude></div>",
+            transclude : true
+        }
+    })
+```
+### compile与link
+&emsp;&emsp;Angularjs的运行流程如下所示：
+![compile与link](./img/1.jpg)
+
+- compile函数用来对模板自身进行转换，link函数负责在模型和视图之间进行动态关联；
+- 作用域在链接阶段才会被绑定到编译之后的link函数上；
+- compile函数仅仅在便一阶段运行一次，而对于指令的每个实例，link函数都会执行一次；
+- compile可以返回preLink和postLink函数，而link函数只会返回postLink函数；
+- 如果需要修改DOM结构，应该在postLink中来做这件事，而如果preLink中做这件事情会导致失误，大所属时候我们只需要编写link函数即可；
+
+```
+    myApp.directive('cpl',function(){
+        return {
+            restrict : 'AECM',
+            template : '<div>Hello bangbang</div>',
+            replace : true,
+            compile : function(){ //用来对模板自身进行转换
+
+            },
+            link : function(){ //用来操作DOM和绑定事件监听器
+
+            }
         }
     })
 ```

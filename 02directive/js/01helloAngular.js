@@ -29,3 +29,27 @@ myApp.directive('cacheDirective',function($templateCache){
         replace : true
     }
 })
+
+//replace
+myApp.directive("noReplace",function(){
+    return {
+        restrict : 'AECM',
+        template : "<div>Hello everyone,I am noReplace!</div><div ng-transclude></div>",
+        transclude : true
+    }
+})
+
+//compile与link
+myApp.directive('cpl',function(){
+    return {
+        restrict : 'AECM',
+        template : '<div>Hello bangbang</div>',
+        replace : true,
+        compile : function(){ //用来对模板自身进行转换
+
+        },
+        link : function(){ //用来操作DOM和绑定事件监听器
+
+        }
+    }
+})

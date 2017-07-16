@@ -1,9 +1,9 @@
 var myModule = angular.module('myModule',[]);
-myModule.directive('supermane',function(){
+myModule.directive('superman',function(){
     return {
-        scope : {},
+        scope : {}, //创建独立作用域
         restrict : 'AE',
-        controller : function($scope){
+        controller : function($scope){//指令内部Controller,给指令暴露出public方法，提供外部调用
             $scope.abilities = [];
             this.addStrength = function(){
                 $scope.abilities.push('strength');
@@ -15,7 +15,7 @@ myModule.directive('supermane',function(){
                 $scope.abilities.push('light');
             }
         },
-        link : function($scope,element,attrs){
+        link : function(scope,element,attrs){
             element.addClass('btn btn-primary');
             element.bind('mouseenter',function(){
                 console.log(scope.abilities);
@@ -25,7 +25,7 @@ myModule.directive('supermane',function(){
 });
 myModule.directive('strength',function(){
     return {
-        require : '^superman',
+        require : '^superman', //表示strength指令依赖Superman指令
         link : function(scope,element,attrs,supermanCtrl){
             supermanCtrl.addStrength();
         }
@@ -34,7 +34,7 @@ myModule.directive('strength',function(){
 myModule.directive("speed",function(){
     return {
         require : '^superman',
-        link : function(scope,element,sttrs,supermanCtrl){
+        link : function(scope,element,attrs,supermanCtrl){
             supermanCtrl.addSpeed();
         }
     }
@@ -46,4 +46,4 @@ myModule.directive("light",function(){
             supermanCtrl.addLight();
         }
     }
-})
+});

@@ -6,3 +6,5 @@ This is a angular-demos, It can show my progress of study. Next, we'll study tog
 - [02directive](https://github.com/flyingpig2016/angular-demos/tree/master/02directive) —— The way to create directive in Angular
 
 - [03link](https://github.com/flyingpig2016/angular-demos/tree/master/03link) —— Interaction between directive and controller in Angular
+
+- [04scope](https://github.com/flyingpig2016/angular-demos/tree/master/04scope) —— Scope binding policy

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>directives</title>
+    <style>
+        .title{width:200px;height:50px;line-height: 50px;background-color:mediumslateblue;text-align: center;}
+        .expander .body{width:200px;height:50px;background-color: mediumslateblue; margin-top:2px;margin-bottom:2px;text-align: center;}}
+    </style>
+</head>
+<body>
+    <div ng-controller="SomeController">
+        <accordion>
+            <expander class="expander" ng-repeat="expander in expanders" expander-title="expander.title">
+                {{expander.text}}
+            </expander>
+        </accordion>
+        
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+<script src="js/expander.js"></script>
+</html>

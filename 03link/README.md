@@ -143,5 +143,9 @@ myModule.directive("light",function(){
     return{
         require : '^superman',
         link : function(scope,element,attrs,supermanCtrl){
-            
+            supermanCtrl.addLight();
+        }
+    }
+});
+
 ```

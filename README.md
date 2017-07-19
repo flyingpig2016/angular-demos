@@ -8,3 +8,11 @@ This is a angular-demos, It can show my progress of study. Next, we'll study tog
 - [03link](https://github.com/flyingpig2016/angular-demos/tree/master/03link) —— 指令和控制器、指令和指令之间的交互（link属性的使用方法）
 
 - [04scope](https://github.com/flyingpig2016/angular-demos/tree/master/04scope) —— scope绑定策略
+
+- [05all-directive]() —— Angularjs中官方组件使用方法(例子：ui-bootstrap)
+
+- [06service]() —— ng中定义service和filter的方法
+
+- [07injector]() —— 理解ng中的依赖和注入
+
+

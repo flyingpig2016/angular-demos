@@ -85,3 +85,4 @@
         $scope.myName = HelloAngular.getName();
     }])
 ```
+github源码：[理解ng中的依赖和注入](https://github.com/flyingpig2016/angular-demos/tree/master/07injector)

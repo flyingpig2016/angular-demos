@@ -80,4 +80,3 @@ myModule.directive('repeater',function(){
     }
 })
 ```
-github源码：[compile函数与link函数用法](https://github.com/flyingpig2016/angular-demos/tree/master/08link-compile)

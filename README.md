@@ -17,4 +17,5 @@ This is a angular-demos, It can show my progress of study. Next, we'll study tog
 
 - [08link-compile](https://github.com/flyingpig2016/angular-demos/tree/master/08link-compile) —— compile函数与link函数用法
 
+- [09project](https://github.com/flyingpig2016/angular-demos/tree/master/project) —— 这是用Angularjs写的小案例
 

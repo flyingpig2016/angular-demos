@@ -15,4 +15,6 @@ This is a angular-demos, It can show my progress of study. Next, we'll study tog
 
 - [07injector](https://github.com/flyingpig2016/angular-demos/tree/master/07injector) —— 理解ng中的依赖和注入
 
+- [08link-compile](https://github.com/flyingpig2016/angular-demos/tree/master/08link-compile) —— compile函数与link函数用法
+
 
